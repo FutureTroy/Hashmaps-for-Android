@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:animateLayoutChanges="true"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    >
+    <include layout="@layout/base_toolbar"/>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="?attr/colorPrimary"
+                android:id="@+id/editTextParentLinearLayout"
+                android:gravity="center"
+                android:layout_weight=".5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+
+                <com.example.troybrown.hashmap.CustomTextInputLayout
+                    app:hintTextAppearance="@style/FloatingLabelTextAppearance"
+                    android:id="@+id/CustomTextInput"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <EditText
+                        android:id="@+id/edTxt_user_title"
+                        android:hint="Post Title"
+                        android:lines="2"
+                        android:inputType="textAutoCorrect|textCapSentences"
+                        android:maxLines="3"
+                        android:textColor="#ffffff"
+                        android:gravity="start|bottom"
+                        android:layout_marginRight="32dp"
+                        android:layout_marginLeft="32dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.example.troybrown.hashmap.CustomTextInputLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/content"
+                android:layout_weight="1.5"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="0dp">
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight=".5"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginLeft="42dp"
+                    android:layout_marginRight="42dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14dp"
+                        android:text="Content"
+                        android:layout_marginBottom="80dp"
+                        style="?android:listSeparatorTextViewStyle"/>
+                    <EditText
+                        android:layout_gravity="bottom"
+                        android:id="@+id/edit_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight=".5"
+                    android:gravity="left|center_vertical"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginLeft="42dp"
+                    android:layout_marginRight="42dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="left">
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/switchEvent"
+                        android:layout_gravity="start"
+                        android:padding="7dp"
+                        android:layout_marginBottom="12dp"
+                        android:gravity="start"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:gravity="start"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="8dp"
+                        android:id="@+id/userToDoRemindMeTextView"
+                        android:text="Temporary Event?"
+                        android:textSize="16sp"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/content_media"
+                    android:animateLayoutChanges="true"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="48dp"
+                    android:layout_marginRight="48dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_height="0dp">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:gravity="top"
+                        android:layout_weight="1"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="10dp">
+
+                        <Button
+                            android:id="@+id/btnAddPicture"
+                            android:text="Picture"
+                            android:textColor="@android:color/white"
+                            android:layout_weight="1"
+                            android:layout_marginRight="4dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" />
+
+
+                        <Button
+                            android:layout_marginLeft="4dp"
+                            android:id="@+id/btnChangeLocaton"
+                            android:textColor="@android:color/white"
+                            android:text="MOve"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabDone"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/ic_done"
+            android:layout_height="wrap_content"
+            app:layout_anchor="@id/editTextParentLinearLayout"
+            app:layout_anchorGravity="bottom|right"
+            app:fabSize="normal"
+            android:layout_width="wrap_content"
+            />
+    </android.support.design.widget.CoordinatorLayout>
+</LinearLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:animateLayoutChanges="true"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    >
+    <include layout="@layout/base_toolbar"/>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="?attr/colorPrimary"
+                android:id="@+id/editTextParentLinearLayout"
+                android:gravity="center"
+                android:layout_weight=".5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+                <!--<TextView
+                    android:id="@+id/titlePlaceHolder"
+                    android:hint="Post Title"
+                    android:lines="2"
+                    android:inputType="textAutoCorrect|textCapSentences"
+                    android:maxLines="3"
+                    android:textColor="#ffffff"
+                    android:gravity="start|bottom"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />-->
+
+
+                    <TextView
+                        android:id="@+id/markerTitle"
+                        android:hint="Post Title"
+                        android:lines="2"
+                        android:inputType="textAutoCorrect|textCapSentences"
+                        android:maxLines="3"
+                        android:textSize="30dp"
+                        android:textColor="#ffffff"
+                        android:textAlignment="center"
+                        android:gravity="start|bottom"
+                        android:layout_marginRight="32dp"
+                        android:layout_marginLeft="32dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="trying to get location..."
+                    android:id="@+id/markerLocation"
+                    android:textAlignment="center"
+                    android:layout_marginBottom="40dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/content"
+                android:layout_weight="1.5"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="0dp">
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight=".5"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginLeft="42dp"
+                    android:layout_marginRight="42dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14dp"
+                        android:text="Description"
+                        android:layout_marginBottom="80dp"
+                        style="?android:listSeparatorTextViewStyle"/>
+                    <TextView
+                        android:layout_gravity="bottom"
+                        android:id="@+id/markerDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight=".5"
+                    android:gravity="left|center_vertical"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginLeft="42dp"
+                    android:layout_marginRight="42dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="left">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/content_media"
+                    android:animateLayoutChanges="true"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="48dp"
+                    android:layout_marginRight="48dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_height="0dp">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:gravity="top"
+                        android:layout_weight="1"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="10dp">
+
+                        <Button
+                            android:id="@+id/btnShowPicture"
+                            android:text="Picture"
+                            android:textColor="@android:color/white"
+                            android:layout_weight="1"
+                            android:layout_marginRight="4dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.design.widget.CoordinatorLayout>
+</LinearLayout>
